@@ -9,4 +9,6 @@ RUN tar -zxf salome.tar.gz -C /opt/salome --strip-components 1
 RUN rm salome.tar.gz
 
 RUN apt update
-RUN apt install -y python3 net-tools libgl1-mesa-glx
+RUN apt install -y python3 net-tools
+RUN apt install -y libgl1-mesa-glx libpng16-16
+ENV PATH /opt/salome:$PATH
